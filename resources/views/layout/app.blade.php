@@ -9,12 +9,12 @@
 <body>
     <header>
         <nav>
-            <a href="">Landing</a>
-            <a href="">Home</a>
-            <a href="">Profile</a>
-            <a href="">Events</a>
-            <a href="">News</a>
-            <a href="">Contact us</a>
+            <a href="{{route('landing')}}">Landing</a>
+            <a href="{{route('home')}}">Home</a>
+            <a href="{{route('profile')}}">Profile</a>
+            <a href="{{route('events')}}">Events</a>
+            <a href="{{route('news')}}">News</a>
+            <a href="{{route('contact')}}">Contact us</a>
         </nav>
     </header>
 @yield ('content')
