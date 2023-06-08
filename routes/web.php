@@ -7,7 +7,7 @@ use App\Http\Controllers\landingcontroller;
 use App\Http\Controllers\newscontroller;
 use App\Http\Controllers\contacts;
 use App\Http\Controllers\eventscontroller;
-
+use App\Http\Controllers\Authcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,11 +25,12 @@ Route::get('/', function () {
 });
 
 Route::get('/home',[homecontroller::class,'index'])->name('home');
-Route::get('/profile',[profilecontroller::class,'index'])->name('profile');
+Route::get('/profile',[profilecontroller::class,'index'])->middleware('auth')->name('profile');
 Route::get('/news',[newscontroller::class,'index'])->name('news');
 Route::get('/landing',[landingcontroller::class,'index'])->name('landing');
 Route::get('/events',[eventscontroller::class,'index'])->name('events');
 Route::get('/contacts',[contactscontroller::class,'index'])->name('contacts');
 
-
+Route::get('/login',[AuthController::class,'index'])->name('login');
+Route::post('/login',[AuthController::class,'login'])->name('login.submit');
 

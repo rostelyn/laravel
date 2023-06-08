@@ -17,6 +17,7 @@
             <a href="{{route('contact')}}">Contact us</a>
         </nav>
     </header>
+    
 @yield ('content')
 </body>
 </html>
