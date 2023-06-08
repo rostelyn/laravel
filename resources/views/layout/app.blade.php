@@ -15,9 +15,16 @@
             <a href="{{route('events')}}">Events</a>
             <a href="{{route('news')}}">News</a>
             <a href="{{route('contact')}}">Contact us</a>
+
+            @if(auth ()->check())
+              <a href="{{route ('logout')}}">Logout</a>
+          @else 
+            <a href="{{route ('login')}}">Login</a>
+
+        @endif
         </nav>
     </header>
-    
+
 @yield ('content')
 </body>
 </html>
